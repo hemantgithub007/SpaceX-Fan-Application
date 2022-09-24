@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		1DA7459228DED4B6000D6FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7459128DED4B6000D6FC8 /* AppDelegate.swift */; };
 		1DA7459428DED4B6000D6FC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7459328DED4B6000D6FC8 /* SceneDelegate.swift */; };
-		1DA7459628DED4B6000D6FC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7459528DED4B6000D6FC8 /* ViewController.swift */; };
 		1DA7459928DED4B6000D6FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7459728DED4B6000D6FC8 /* Main.storyboard */; };
 		1DA7459B28DED4B8000D6FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7459A28DED4B8000D6FC8 /* Assets.xcassets */; };
 		1DA7459E28DED4B8000D6FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7459C28DED4B8000D6FC8 /* LaunchScreen.storyboard */; };
+		1DA745B128DED70F000D6FC8 /* DashBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA745B028DED70F000D6FC8 /* DashBoard.storyboard */; };
+		1DA745B328DED83D000D6FC8 /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA745B228DED83D000D6FC8 /* Login_ViewController.swift */; };
+		1DA745B528DED86B000D6FC8 /* Dashboard_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA745B428DED86B000D6FC8 /* Dashboard_ViewController.swift */; };
+		1DA745B728DEDA20000D6FC8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA745B628DEDA20000D6FC8 /* LocalAuthentication.framework */; };
+		4B9F1C2355B3428B7CBDB277 /* Pods_SpaceXFanApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DA7458E28DED4B6000D6FC8 /* SpaceXFanApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXFanApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA7459128DED4B6000D6FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DA7459328DED4B6000D6FC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1DA7459528DED4B6000D6FC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DA7459828DED4B6000D6FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DA7459A28DED4B8000D6FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA7459D28DED4B8000D6FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA7459F28DED4B8000D6FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA745B028DED70F000D6FC8 /* DashBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashBoard.storyboard; sourceTree = "<group>"; };
+		1DA745B228DED83D000D6FC8 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
+		1DA745B428DED86B000D6FC8 /* Dashboard_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard_ViewController.swift; sourceTree = "<group>"; };
+		1DA745B628DEDA20000D6FC8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXFanApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		400B426E3854115E2A444B34 /* Pods-SpaceXFanApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXFanApplication.release.xcconfig"; path = "Target Support Files/Pods-SpaceXFanApplication/Pods-SpaceXFanApplication.release.xcconfig"; sourceTree = "<group>"; };
+		50A08F23DB7A3F530F1E192E /* Pods-SpaceXFanApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXFanApplication.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXFanApplication/Pods-SpaceXFanApplication.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA745B728DEDA20000D6FC8 /* LocalAuthentication.framework in Frameworks */,
+				4B9F1C2355B3428B7CBDB277 /* Pods_SpaceXFanApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,8 @@
 			children = (
 				1DA7459028DED4B6000D6FC8 /* SpaceXFanApplication */,
 				1DA7458F28DED4B6000D6FC8 /* Products */,
+				375574D6DE90ECEEFF6113B0 /* Pods */,
+				944687069EF647C740574323 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +70,91 @@
 		1DA7459028DED4B6000D6FC8 /* SpaceXFanApplication */ = {
 			isa = PBXGroup;
 			children = (
+				1DA745A728DED6DC000D6FC8 /* MVVM */,
+				1DA745A628DED561000D6FC8 /* CustomFont */,
+				1DA745A528DED538000D6FC8 /* CommonClasses */,
 				1DA7459128DED4B6000D6FC8 /* AppDelegate.swift */,
 				1DA7459328DED4B6000D6FC8 /* SceneDelegate.swift */,
-				1DA7459528DED4B6000D6FC8 /* ViewController.swift */,
 				1DA7459728DED4B6000D6FC8 /* Main.storyboard */,
+				1DA745B028DED70F000D6FC8 /* DashBoard.storyboard */,
 				1DA7459A28DED4B8000D6FC8 /* Assets.xcassets */,
 				1DA7459C28DED4B8000D6FC8 /* LaunchScreen.storyboard */,
 				1DA7459F28DED4B8000D6FC8 /* Info.plist */,
 			);
 			path = SpaceXFanApplication;
+			sourceTree = "<group>";
+		};
+		1DA745A528DED538000D6FC8 /* CommonClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonClasses;
+			sourceTree = "<group>";
+		};
+		1DA745A628DED561000D6FC8 /* CustomFont */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomFont;
+			sourceTree = "<group>";
+		};
+		1DA745A728DED6DC000D6FC8 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				1DA745A828DED6DC000D6FC8 /* ViewModels */,
+				1DA745A928DED6DC000D6FC8 /* Models */,
+				1DA745AA28DED6DC000D6FC8 /* Controllers */,
+				1DA745AD28DED6DC000D6FC8 /* Services */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		1DA745A828DED6DC000D6FC8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1DA745A928DED6DC000D6FC8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1DA745AA28DED6DC000D6FC8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DA745B228DED83D000D6FC8 /* Login_ViewController.swift */,
+				1DA745B428DED86B000D6FC8 /* Dashboard_ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1DA745AD28DED6DC000D6FC8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		375574D6DE90ECEEFF6113B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50A08F23DB7A3F530F1E192E /* Pods-SpaceXFanApplication.debug.xcconfig */,
+				400B426E3854115E2A444B34 /* Pods-SpaceXFanApplication.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		944687069EF647C740574323 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DA745B628DEDA20000D6FC8 /* LocalAuthentication.framework */,
+				248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA745A228DED4B8000D6FC8 /* Build configuration list for PBXNativeTarget "SpaceXFanApplication" */;
 			buildPhases = (
+				8939DC43EFD0626107E05032 /* [CP] Check Pods Manifest.lock */,
 				1DA7458A28DED4B6000D6FC8 /* Sources */,
 				1DA7458B28DED4B6000D6FC8 /* Frameworks */,
 				1DA7458C28DED4B6000D6FC8 /* Resources */,
+				3826F0B529E4D92BCEBF87EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,17 +220,61 @@
 				1DA7459E28DED4B8000D6FC8 /* LaunchScreen.storyboard in Resources */,
 				1DA7459B28DED4B8000D6FC8 /* Assets.xcassets in Resources */,
 				1DA7459928DED4B6000D6FC8 /* Main.storyboard in Resources */,
+				1DA745B128DED70F000D6FC8 /* DashBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3826F0B529E4D92BCEBF87EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXFanApplication/Pods-SpaceXFanApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXFanApplication/Pods-SpaceXFanApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXFanApplication/Pods-SpaceXFanApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8939DC43EFD0626107E05032 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpaceXFanApplication-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DA7458A28DED4B6000D6FC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DA7459628DED4B6000D6FC8 /* ViewController.swift in Sources */,
+				1DA745B328DED83D000D6FC8 /* Login_ViewController.swift in Sources */,
+				1DA745B528DED86B000D6FC8 /* Dashboard_ViewController.swift in Sources */,
 				1DA7459228DED4B6000D6FC8 /* AppDelegate.swift in Sources */,
 				1DA7459428DED4B6000D6FC8 /* SceneDelegate.swift in Sources */,
 			);
@@ -199,6 +335,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viki Bharti (2SDZ789FRL)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -217,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -260,6 +397,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viki Bharti (2SDZ789FRL)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -272,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,55 +422,67 @@
 		};
 		1DA745A328DED4B8000D6FC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A08F23DB7A3F530F1E192E /* Pods-SpaceXFanApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viki Bharti (2SDZ789FRL)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9G4Y3Q48LW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpaceXFanApplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SpaceX Fan";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Vestel.SpaceXFanApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.imsEngineer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "DIMS Engineer Testing";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1DA745A428DED4B8000D6FC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 400B426E3854115E2A444B34 /* Pods-SpaceXFanApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viki Bharti (2SDZ789FRL)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9G4Y3Q48LW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpaceXFanApplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SpaceX Fan";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Vestel.SpaceXFanApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.imsEngineer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "DIMS Engineer Testing";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

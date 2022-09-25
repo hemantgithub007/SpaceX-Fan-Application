@@ -172,10 +172,8 @@
                                     <constraint firstAttribute="width" constant="200" id="Buh-4C-AcG"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="touchID" subtitle="Or use TouchID" imagePadding="10">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Or use TouchID" image="touchID"/>
                                 <connections>
                                     <action selector="click_To_TouchID:" destination="1g6-QN-dzb" eventType="touchUpInside" id="6kh-cG-iuF"/>
                                 </connections>

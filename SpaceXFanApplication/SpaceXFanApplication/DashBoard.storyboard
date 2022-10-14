@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,6 +49,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zB0-mz-pHe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Q4a-cW-n4G" secondAttribute="bottom" id="0be-Hk-wGg"/>
@@ -96,7 +98,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RocketList_Cell" rowHeight="200" id="pGu-aK-4X8" customClass="RocketList_Cell" customModule="SpaceXFanApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pGu-aK-4X8" id="Hoq-pe-m0o">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -112,7 +114,7 @@
                                                                 <constraint firstAttribute="height" constant="1" id="kUZ-x9-GVf"/>
                                                             </constraints>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4An-Iy-FbY">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4An-Iy-FbY">
                                                             <rect key="frame" x="107.5" y="30" width="160" height="160"/>
                                                             <color key="backgroundColor" systemColor="tintColor"/>
                                                             <constraints>
@@ -173,6 +175,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="like_button" destination="5Jf-pO-jSU" id="bxe-pV-drB"/>
+                                            <outlet property="like_image" destination="fXA-qZ-RVG" id="DeA-Sz-luv"/>
+                                            <outlet property="rocket_image" destination="4An-Iy-FbY" id="cW5-IQ-7gG"/>
+                                            <outlet property="rocket_name" destination="FQL-hd-y2S" id="sCa-2q-WIV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -181,6 +189,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fDE-WV-U17"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="syE-Po-yZI" firstAttribute="trailing" secondItem="SAy-o3-Qfd" secondAttribute="trailing" id="EOp-X2-kml"/>
@@ -189,6 +198,9 @@
                             <constraint firstItem="syE-Po-yZI" firstAttribute="bottom" secondItem="SAy-o3-Qfd" secondAttribute="bottom" id="mdI-lg-tPK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rocketListTable" destination="syE-Po-yZI" id="cvh-Pw-lS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lb0-u8-bhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,7 +220,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavouriteList_Cell" rowHeight="200" id="v7h-6O-mJC" customClass="FavouriteList_Cell" customModule="SpaceXFanApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v7h-6O-mJC" id="o3p-nd-sNM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -293,6 +305,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZT6-yT-GJw"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nOv-qj-ZjJ" secondAttribute="trailing" id="2Wj-hh-YZi"/>
@@ -320,7 +333,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UpComingList_Cell" rowHeight="60" id="p8d-so-BMT" customClass="UpComingList_Cell" customModule="SpaceXFanApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p8d-so-BMT" id="NCs-pY-cjd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -363,6 +376,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="d0r-aq-BJx"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Kw7-j2-TBb" secondAttribute="trailing" id="2TV-lc-wE4"/>

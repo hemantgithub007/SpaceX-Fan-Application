@@ -1,13 +1,13 @@
 //
-//  RocketList_Cell.swift
+//  FavouriteList_Cell.swift
 //  SpaceXFanApplication
 //
-//  Created by teamcomputers on 25/09/22.
+//  Created by Vestel on 25/09/22.
 //
 
 import UIKit
 
-class RocketList_Cell: UITableViewCell {
+class FavouriteList_Cell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -24,6 +24,25 @@
 		1DBCB8B928E043850017980D /* UpComingList_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCB8B828E043850017980D /* UpComingList_Cell.swift */; };
 		1DBCB8BB28E052200017980D /* Detailboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBCB8BA28E052200017980D /* Detailboard.storyboard */; };
 		1DDC577028DF2C97002EA24C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC576F28DF2C97002EA24C /* UIColor.swift */; };
+		2BA01B7B28F7C42A007ACAC8 /* RocketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */; };
+		2BA01B7C28F7C42A007ACAC8 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */; };
+		2BA01B7F28F7C44C007ACAC8 /* RocketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7E28F7C44C007ACAC8 /* RocketDataModel.swift */; };
+		2BA01B8D28F7C59A007ACAC8 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8128F7C598007ACAC8 /* Roboto-Regular.ttf */; };
+		2BA01B8E28F7C59A007ACAC8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8228F7C598007ACAC8 /* Roboto-Bold.ttf */; };
+		2BA01B8F28F7C59A007ACAC8 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8328F7C598007ACAC8 /* Roboto-MediumItalic.ttf */; };
+		2BA01B9028F7C59A007ACAC8 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8428F7C598007ACAC8 /* Roboto-Italic.ttf */; };
+		2BA01B9128F7C59A007ACAC8 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8528F7C598007ACAC8 /* Roboto-Medium.ttf */; };
+		2BA01B9228F7C59A007ACAC8 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8628F7C599007ACAC8 /* Roboto-BlackItalic.ttf */; };
+		2BA01B9328F7C59A007ACAC8 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8728F7C599007ACAC8 /* Roboto-ThinItalic.ttf */; };
+		2BA01B9428F7C59A007ACAC8 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8828F7C599007ACAC8 /* Roboto-Black.ttf */; };
+		2BA01B9528F7C59A007ACAC8 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8928F7C599007ACAC8 /* Roboto-BoldItalic.ttf */; };
+		2BA01B9628F7C59A007ACAC8 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8A28F7C599007ACAC8 /* Roboto-LightItalic.ttf */; };
+		2BA01B9728F7C59A007ACAC8 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8B28F7C599007ACAC8 /* Roboto-Thin.ttf */; };
+		2BA01B9828F7C59A007ACAC8 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA01B8C28F7C59A007ACAC8 /* Roboto-Light.ttf */; };
+		2BA01BA328F7DE33007ACAC8 /* FavouriteRocketData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01BA128F7DE33007ACAC8 /* FavouriteRocketData+CoreDataClass.swift */; };
+		2BA01BA428F7DE33007ACAC8 /* FavouriteRocketData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01BA228F7DE33007ACAC8 /* FavouriteRocketData+CoreDataProperties.swift */; };
+		2BA01BA728F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01BA528F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodeld */; };
+		2BA01BA928F7DF2E007ACAC8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA01BA828F7DF2E007ACAC8 /* CoreData.framework */; };
 		4B9F1C2355B3428B7CBDB277 /* Pods_SpaceXFanApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +67,25 @@
 		1DBCB8BA28E052200017980D /* Detailboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detailboard.storyboard; sourceTree = "<group>"; };
 		1DDC576F28DF2C97002EA24C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXFanApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDataViewModel.swift; sourceTree = "<group>"; };
+		2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		2BA01B7E28F7C44C007ACAC8 /* RocketDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDataModel.swift; sourceTree = "<group>"; };
+		2BA01B8128F7C598007ACAC8 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		2BA01B8228F7C598007ACAC8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		2BA01B8328F7C598007ACAC8 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2BA01B8428F7C598007ACAC8 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		2BA01B8528F7C598007ACAC8 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		2BA01B8628F7C599007ACAC8 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2BA01B8728F7C599007ACAC8 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		2BA01B8828F7C599007ACAC8 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		2BA01B8928F7C599007ACAC8 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2BA01B8A28F7C599007ACAC8 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		2BA01B8B28F7C599007ACAC8 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		2BA01B8C28F7C59A007ACAC8 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		2BA01BA128F7DE33007ACAC8 /* FavouriteRocketData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouriteRocketData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2BA01BA228F7DE33007ACAC8 /* FavouriteRocketData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouriteRocketData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BA01BA628F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavouriteRocketData.xcdatamodel; sourceTree = "<group>"; };
+		2BA01BA828F7DF2E007ACAC8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		400B426E3854115E2A444B34 /* Pods-SpaceXFanApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXFanApplication.release.xcconfig"; path = "Target Support Files/Pods-SpaceXFanApplication/Pods-SpaceXFanApplication.release.xcconfig"; sourceTree = "<group>"; };
 		50A08F23DB7A3F530F1E192E /* Pods-SpaceXFanApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXFanApplication.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXFanApplication/Pods-SpaceXFanApplication.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA01BA928F7DF2E007ACAC8 /* CoreData.framework in Frameworks */,
 				1DA745B728DEDA20000D6FC8 /* LocalAuthentication.framework in Frameworks */,
 				4B9F1C2355B3428B7CBDB277 /* Pods_SpaceXFanApplication.framework in Frameworks */,
 			);
@@ -68,6 +107,7 @@
 		1DA7458528DED4B6000D6FC8 = {
 			isa = PBXGroup;
 			children = (
+				2BA01B9C28F7D28C007ACAC8 /* LocalDataBase */,
 				1DA7459028DED4B6000D6FC8 /* SpaceXFanApplication */,
 				1DA7458F28DED4B6000D6FC8 /* Products */,
 				375574D6DE90ECEEFF6113B0 /* Pods */,
@@ -86,8 +126,8 @@
 		1DA7459028DED4B6000D6FC8 /* SpaceXFanApplication */ = {
 			isa = PBXGroup;
 			children = (
+				2BA01B8028F7C580007ACAC8 /* RobotoFont */,
 				1DA745A728DED6DC000D6FC8 /* MVVM */,
-				1DA745A628DED561000D6FC8 /* CustomFont */,
 				1DA745A528DED538000D6FC8 /* CommonClasses */,
 				1DA7459128DED4B6000D6FC8 /* AppDelegate.swift */,
 				1DA7459328DED4B6000D6FC8 /* SceneDelegate.swift */,
@@ -109,39 +149,17 @@
 			path = CommonClasses;
 			sourceTree = "<group>";
 		};
-		1DA745A628DED561000D6FC8 /* CustomFont */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomFont;
-			sourceTree = "<group>";
-		};
 		1DA745A728DED6DC000D6FC8 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				1DA745A828DED6DC000D6FC8 /* ViewModels */,
-				1DA745A928DED6DC000D6FC8 /* Models */,
-				1DA745AA28DED6DC000D6FC8 /* Controllers */,
-				1DA745AD28DED6DC000D6FC8 /* Services */,
+				2BA01B7D28F7C437007ACAC8 /* Model */,
+				2BA01B7828F7C40A007ACAC8 /* ViewModel */,
+				1DA745AA28DED6DC000D6FC8 /* View */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
 		};
-		1DA745A828DED6DC000D6FC8 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		1DA745A928DED6DC000D6FC8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		1DA745AA28DED6DC000D6FC8 /* Controllers */ = {
+		1DA745AA28DED6DC000D6FC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				1DA745B228DED83D000D6FC8 /* Login_ViewController.swift */,
@@ -153,14 +171,53 @@
 				1DB6286428DF7DB200B9F6F5 /* UpComingList_ViewController.swift */,
 				1DBCB8B828E043850017980D /* UpComingList_Cell.swift */,
 			);
-			path = Controllers;
+			path = View;
 			sourceTree = "<group>";
 		};
-		1DA745AD28DED6DC000D6FC8 /* Services */ = {
+		2BA01B7828F7C40A007ACAC8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */,
+				2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */,
 			);
-			path = Services;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BA01B7D28F7C437007ACAC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BA01B7E28F7C44C007ACAC8 /* RocketDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BA01B8028F7C580007ACAC8 /* RobotoFont */ = {
+			isa = PBXGroup;
+			children = (
+				2BA01B8828F7C599007ACAC8 /* Roboto-Black.ttf */,
+				2BA01B8628F7C599007ACAC8 /* Roboto-BlackItalic.ttf */,
+				2BA01B8228F7C598007ACAC8 /* Roboto-Bold.ttf */,
+				2BA01B8928F7C599007ACAC8 /* Roboto-BoldItalic.ttf */,
+				2BA01B8428F7C598007ACAC8 /* Roboto-Italic.ttf */,
+				2BA01B8C28F7C59A007ACAC8 /* Roboto-Light.ttf */,
+				2BA01B8A28F7C599007ACAC8 /* Roboto-LightItalic.ttf */,
+				2BA01B8528F7C598007ACAC8 /* Roboto-Medium.ttf */,
+				2BA01B8328F7C598007ACAC8 /* Roboto-MediumItalic.ttf */,
+				2BA01B8128F7C598007ACAC8 /* Roboto-Regular.ttf */,
+				2BA01B8B28F7C599007ACAC8 /* Roboto-Thin.ttf */,
+				2BA01B8728F7C599007ACAC8 /* Roboto-ThinItalic.ttf */,
+			);
+			path = RobotoFont;
+			sourceTree = "<group>";
+		};
+		2BA01B9C28F7D28C007ACAC8 /* LocalDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				2BA01BA128F7DE33007ACAC8 /* FavouriteRocketData+CoreDataClass.swift */,
+				2BA01BA228F7DE33007ACAC8 /* FavouriteRocketData+CoreDataProperties.swift */,
+				2BA01BA528F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodeld */,
+			);
+			path = LocalDataBase;
 			sourceTree = "<group>";
 		};
 		375574D6DE90ECEEFF6113B0 /* Pods */ = {
@@ -175,6 +232,7 @@
 		944687069EF647C740574323 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BA01BA828F7DF2E007ACAC8 /* CoreData.framework */,
 				1DA745B628DEDA20000D6FC8 /* LocalAuthentication.framework */,
 				248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */,
 			);
@@ -241,10 +299,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA01B9728F7C59A007ACAC8 /* Roboto-Thin.ttf in Resources */,
+				2BA01B9328F7C59A007ACAC8 /* Roboto-ThinItalic.ttf in Resources */,
+				2BA01B9128F7C59A007ACAC8 /* Roboto-Medium.ttf in Resources */,
+				2BA01B9628F7C59A007ACAC8 /* Roboto-LightItalic.ttf in Resources */,
+				2BA01B8E28F7C59A007ACAC8 /* Roboto-Bold.ttf in Resources */,
+				2BA01B9028F7C59A007ACAC8 /* Roboto-Italic.ttf in Resources */,
+				2BA01B8D28F7C59A007ACAC8 /* Roboto-Regular.ttf in Resources */,
 				1DA7459E28DED4B8000D6FC8 /* LaunchScreen.storyboard in Resources */,
 				1DA7459B28DED4B8000D6FC8 /* Assets.xcassets in Resources */,
+				2BA01B9228F7C59A007ACAC8 /* Roboto-BlackItalic.ttf in Resources */,
+				2BA01B8F28F7C59A007ACAC8 /* Roboto-MediumItalic.ttf in Resources */,
+				2BA01B9428F7C59A007ACAC8 /* Roboto-Black.ttf in Resources */,
+				2BA01B9828F7C59A007ACAC8 /* Roboto-Light.ttf in Resources */,
 				1DA7459928DED4B6000D6FC8 /* Main.storyboard in Resources */,
 				1DBCB8BB28E052200017980D /* Detailboard.storyboard in Resources */,
+				2BA01B9528F7C59A007ACAC8 /* Roboto-BoldItalic.ttf in Resources */,
 				1DA745B128DED70F000D6FC8 /* DashBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,13 +372,19 @@
 				1DBCB8B728E043630017980D /* FavouriteList_Cell.swift in Sources */,
 				1DB6286328DF7D9500B9F6F5 /* FavouriteList_ViewController.swift in Sources */,
 				1DB6286128DF7B1E00B9F6F5 /* RocketList_ViewController.swift in Sources */,
+				2BA01BA328F7DE33007ACAC8 /* FavouriteRocketData+CoreDataClass.swift in Sources */,
 				1DA745B328DED83D000D6FC8 /* Login_ViewController.swift in Sources */,
 				1DA745B528DED86B000D6FC8 /* Dashboard_ViewController.swift in Sources */,
+				2BA01B7B28F7C42A007ACAC8 /* RocketDataViewModel.swift in Sources */,
+				2BA01B7F28F7C44C007ACAC8 /* RocketDataModel.swift in Sources */,
+				2BA01BA428F7DE33007ACAC8 /* FavouriteRocketData+CoreDataProperties.swift in Sources */,
+				2BA01BA728F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodeld in Sources */,
 				1D77BF0928E0413D00F0AD2A /* RocketList_Cell.swift in Sources */,
 				1DA7459228DED4B6000D6FC8 /* AppDelegate.swift in Sources */,
 				1DBCB8B928E043850017980D /* UpComingList_Cell.swift in Sources */,
 				1DA7459428DED4B6000D6FC8 /* SceneDelegate.swift in Sources */,
 				1DDC577028DF2C97002EA24C /* UIColor.swift in Sources */,
+				2BA01B7C28F7C42A007ACAC8 /* DatabaseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +616,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2BA01BA528F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BA01BA628F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodel */,
+			);
+			currentVersion = 2BA01BA628F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodel */;
+			path = FavouriteRocketData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1DA7458628DED4B6000D6FC8 /* Project object */;
 }

@@ -1,14 +1,20 @@
 //
-//  UpComingList_Cell.swift
+//  RocketList_Cell.swift
 //  SpaceXFanApplication
 //
-//  Created by teamcomputers on 25/09/22.
+//  Created by Vestel on 25/09/22.
 //
 
 import UIKit
 
-class UpComingList_Cell: UITableViewCell {
+class RocketList_Cell: UITableViewCell {
 
+    
+    @IBOutlet var rocket_image: UIImageView!
+    @IBOutlet var like_image: UIImageView!
+    @IBOutlet var rocket_name: UILabel!
+    @IBOutlet var like_button: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

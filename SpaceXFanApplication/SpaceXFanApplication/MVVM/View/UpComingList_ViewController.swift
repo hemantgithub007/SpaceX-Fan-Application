@@ -1,14 +1,14 @@
 //
-//  RocketList_ViewController.swift
+//  UpComingList_ViewController.swift
 //  SpaceXFanApplication
 //
-//  Created by teamcomputers on 24/09/22.
+//  Created by Vestel on 24/09/22.
 //
 
 import UIKit
 
-class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-
+class UpComingList_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +23,7 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
       
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           
-          let cell:RocketList_Cell = tableView.dequeueReusableCell(withIdentifier: "RocketList_Cell") as! RocketList_Cell
+          let cell:UpComingList_Cell = tableView.dequeueReusableCell(withIdentifier: "UpComingList_Cell") as! UpComingList_Cell
    
           return cell
         //  UITableViewStyle *cell

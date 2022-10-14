@@ -2,7 +2,7 @@
 //  Dashboard_ViewController.swift
 //  SpaceXFanApplication
 //
-//  Created by teamcomputers on 24/09/22.
+//  Created by Vestel on 24/09/22.
 //
 
 import UIKit
@@ -64,7 +64,7 @@ class Dashboard_ViewController: UIViewController {
         self.headerView.addSubview(rocketsButton)
         
         
-        favouritesButton.setTitle("Rockets", for: .normal)
+        favouritesButton.setTitle("Favourite", for: .normal)
         favouritesButton.tag = 1
         favouritesButton.setTitleColor(.white, for: .normal)
         favouritesButton.frame = CGRect(x: self.view.frame.size.width/3, y: 40 , width: self.view.frame.size.width/3, height: 30)
@@ -72,7 +72,7 @@ class Dashboard_ViewController: UIViewController {
         self.headerView.addSubview(favouritesButton)
         
         
-        upcomingButtons.setTitle("Rockets", for: .normal)
+        upcomingButtons.setTitle("Up Coming", for: .normal)
         upcomingButtons.tag = 2
         upcomingButtons.setTitleColor(.white, for: .normal)
         upcomingButtons.frame = CGRect(x: (self.view.frame.size.width/3) * 2, y: 40 , width: self.view.frame.size.width/3, height: 30)

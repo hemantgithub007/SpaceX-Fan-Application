@@ -2,7 +2,7 @@
 //  Login_ViewController.swift
 //  SpaceXFanApplication
 //
-//  Created by teamcomputers on 24/09/22.
+//  Created by Vestel on 24/09/22.
 //
 
 import UIKit
@@ -16,6 +16,8 @@ class Login_ViewController: UIViewController {
     @IBOutlet weak var userPasswordView: UIView!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet var userNameText: UITextField!
+    @IBOutlet var userPasswordText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +69,12 @@ class Login_ViewController: UIViewController {
         }
 
     @IBAction func click_To_Login(_ sender: UIButton) {
+     
+        
+        
+        
+        
+        
         
         
         let vc = UIStoryboard(name: "DashBoard", bundle: nil).instantiateViewController(withIdentifier: "Dashboard_ViewController") as! Dashboard_ViewController
@@ -80,4 +88,32 @@ class Login_ViewController: UIViewController {
 
     }
     
+}
+
+
+extension Login_ViewController
+{
+    
+    
+    
+    // email validationFuntion
+    func validateEmail(enteredEmail:String) -> Bool {
+        
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: enteredEmail)
+        
+    }
+    
+
+    // password validation
+    
+     func validatePassword(password : String) -> Bool {
+        var isValid = false
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[d$@$!%*?&#])[A-Za-z\\dd$@$!%*?&#]{8,}"
+        let checkPassword = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        isValid = checkPassword.evaluate(with: password)
+        return isValid
+    }
+        
 }

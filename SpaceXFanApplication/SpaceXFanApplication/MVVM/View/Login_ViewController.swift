@@ -72,10 +72,35 @@ class Login_ViewController: UIViewController {
      
         
         
+        let emailValue = userNameText.text ?? ""
+        if (validateEmail(enteredEmail: emailValue) == false)
+        {
+            let alertController = UIAlertController(title: "Alert!", message: "Enter valid e-mail", preferredStyle:UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            { action -> Void in
+                // Put your code here
+            })
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if (BSValidations.validatePassword(userPasswordText.text!) == false)
+        {
+            let alertController = UIAlertController(title: "Alert!", message: "Enter valid password.", preferredStyle:UIAlertController.Style.alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            { action -> Void in
+                // Put your code here
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+            return
+            
+        }
         
         
         
-        
+        //......
         
         let vc = UIStoryboard(name: "DashBoard", bundle: nil).instantiateViewController(withIdentifier: "Dashboard_ViewController") as! Dashboard_ViewController
         self.navigationController?.pushViewController(vc, animated: true)

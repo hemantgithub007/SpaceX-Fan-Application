@@ -16,12 +16,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // call splash screen
+        self.splashScreen()
+        
+        //keybord manager
         IQKeyboardManager.shared.enable = true
         print("DataPath : ",FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-
+        
         return true
     }
 
+    
+    
+    
+        // Splash Screen
+    func splashScreen() {
+        let launchScreenVC = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
+        let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "splashController")
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(dismissSplashController), userInfo: nil, repeats: false)
+    }
+    
+    
+   @objc func dismissSplashController() {
+       let launchScreenVC = UIStoryboard.init(name: "Main", bundle: nil)
+       let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "Login_ViewController")
+       self.window?.rootViewController = rootVC
+       self.window?.makeKeyAndVisible()
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

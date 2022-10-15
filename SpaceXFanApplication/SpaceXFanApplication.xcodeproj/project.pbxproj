@@ -24,6 +24,7 @@
 		1DBCB8B928E043850017980D /* UpComingList_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCB8B828E043850017980D /* UpComingList_Cell.swift */; };
 		1DBCB8BB28E052200017980D /* Detailboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBCB8BA28E052200017980D /* Detailboard.storyboard */; };
 		1DDC577028DF2C97002EA24C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC576F28DF2C97002EA24C /* UIColor.swift */; };
+		2B29512028FAA75500401D0E /* BSValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29511F28FAA75500401D0E /* BSValidations.swift */; };
 		2BA01B7B28F7C42A007ACAC8 /* RocketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */; };
 		2BA01B7C28F7C42A007ACAC8 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */; };
 		2BA01B7F28F7C44C007ACAC8 /* RocketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7E28F7C44C007ACAC8 /* RocketDataModel.swift */; };
@@ -67,6 +68,7 @@
 		1DBCB8BA28E052200017980D /* Detailboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detailboard.storyboard; sourceTree = "<group>"; };
 		1DDC576F28DF2C97002EA24C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXFanApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B29511F28FAA75500401D0E /* BSValidations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSValidations.swift; sourceTree = "<group>"; };
 		2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDataViewModel.swift; sourceTree = "<group>"; };
 		2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		2BA01B7E28F7C44C007ACAC8 /* RocketDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDataModel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		1DA745A528DED538000D6FC8 /* CommonClasses */ = {
 			isa = PBXGroup;
 			children = (
+				2B29511F28FAA75500401D0E /* BSValidations.swift */,
 				1DDC576F28DF2C97002EA24C /* UIColor.swift */,
 			);
 			path = CommonClasses;
@@ -385,6 +388,7 @@
 				1DA7459428DED4B6000D6FC8 /* SceneDelegate.swift in Sources */,
 				1DDC577028DF2C97002EA24C /* UIColor.swift in Sources */,
 				2BA01B7C28F7C42A007ACAC8 /* DatabaseHelper.swift in Sources */,
+				2B29512028FAA75500401D0E /* BSValidations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

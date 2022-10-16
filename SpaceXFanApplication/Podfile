@@ -11,6 +11,7 @@ target 'SpaceXFanApplication' do
   pod 'IQKeyboardManagerSwift'
   pod 'Kingfisher', '~> 5.0'
   pod 'SVProgressHUD'
+  pod 'Firebase/Auth'
 
 
 end

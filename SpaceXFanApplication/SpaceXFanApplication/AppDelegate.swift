@@ -8,21 +8,42 @@
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
+import Firebase
+import FirebaseCore
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Firebase
+        FirebaseApp.configure()
         
-        // call splash screen
-        self.splashScreen()
         
         //keybord manager
         IQKeyboardManager.shared.enable = true
         print("DataPath : ",FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+       
+        
+
+        // Check User already login
+        if UserDefaults.standard.string(forKey: "user") == nil
+        {
+            // call splash screen
+            self.splashScreen()
+        }
+        else
+        {
+            let launchScreenVC = UIStoryboard.init(name: "DashBoard", bundle: nil)
+            let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "Dashboard_ViewController")
+            self.window?.rootViewController = rootVC
+            self.window?.makeKeyAndVisible()
+        }
+        
+ 
         
         return true
     }
@@ -41,10 +62,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
    @objc func dismissSplashController() {
-       let launchScreenVC = UIStoryboard.init(name: "Main", bundle: nil)
-       let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "Login_ViewController")
-       self.window?.rootViewController = rootVC
-       self.window?.makeKeyAndVisible()
+       // Onetime Login
+
+           let launchScreenVC = UIStoryboard.init(name: "Main", bundle: nil)
+           let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "Login_ViewController")
+           self.window?.rootViewController = rootVC
+           self.window?.makeKeyAndVisible()
+ 
     }
     
     // MARK: UISceneSession Lifecycle

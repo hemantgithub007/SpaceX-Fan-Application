@@ -7,7 +7,7 @@
 
 import UIKit
 import LocalAuthentication
-
+import Firebase
 
 class Login_ViewController: UIViewController {
 
@@ -26,6 +26,9 @@ class Login_ViewController: UIViewController {
         self.userPasswordView.layer.cornerRadius = 5.0
         self.loginButton.layer.cornerRadius = 5.0
 
+        
+        
+        
     }
     
     
@@ -42,10 +45,7 @@ class Login_ViewController: UIViewController {
                     
                     if success {
                         DispatchQueue.main.async() {
-//                            let alert = UIAlertController(title: "Success", message: "Authenticated succesfully!", preferredStyle: UIAlertController.Style.alert)
-//                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                            self.present(alert, animated: true, completion: nil)
-//
+
                             let vc = UIStoryboard(name: "DashBoard", bundle: nil).instantiateViewController(withIdentifier: "Dashboard_ViewController") as! Dashboard_ViewController
                             self.navigationController?.pushViewController(vc, animated: true)
                         }
@@ -67,6 +67,18 @@ class Login_ViewController: UIViewController {
                 print(error)
             }
         }
+    
+    
+    
+    @IBAction func click_To_Register(_ sender: UIButton) {
+        
+   
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Register_ViewController") as! Register_ViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+         
+    }
+    
+    
 
     @IBAction func click_To_Login(_ sender: UIButton) {
      
@@ -84,7 +96,7 @@ class Login_ViewController: UIViewController {
             return
         }
         
-        if (BSValidations.validatePassword(userPasswordText.text!) == false)
+        if (BSValidations.validatePassword(userPasswordText.text ?? "") == false)
         {
             let alertController = UIAlertController(title: "Alert!", message: "Enter valid password.", preferredStyle:UIAlertController.Style.alert)
             
@@ -99,11 +111,63 @@ class Login_ViewController: UIViewController {
         }
         
         
+        Auth.auth().signIn(withEmail: userNameText.text ?? "", password: userPasswordText.text ?? "") { (authResult, error) in
+
+            if error != nil
+            {
+                print(error?.localizedDescription ?? "Exceptions")
+                
+                
+                let alert = UIAlertController(title: "Alert!", message: error?.localizedDescription, preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+                
+                // change to desired number of seconds (in this case 5 seconds)
+                let when = DispatchTime.now() + 2
+                DispatchQueue.main.asyncAfter(deadline: when){
+                    // your code with delay
+                    alert.dismiss(animated: true, completion: {
+                        
+                      
+                        
+                    })
+                }
+                
+                
+                
+            }
+            else
+            {
+                
+             
+                
+                let alert = UIAlertController(title: "Alert!", message: "Login successfully", preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+                
+                // change to desired number of seconds (in this case 5 seconds)
+                let when = DispatchTime.now() + 2
+                DispatchQueue.main.asyncAfter(deadline: when){
+                    // your code with delay
+                    alert.dismiss(animated: true, completion: {
+                        
+                        print("Login with ID : ",(authResult?.user.email ?? "") as String)
+
+                        UserDefaults.standard.set(authResult?.user.email, forKey: "user")
+                        let vc = UIStoryboard(name: "DashBoard", bundle: nil).instantiateViewController(withIdentifier: "Dashboard_ViewController") as! Dashboard_ViewController
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        
+                    })
+                }
+                
+                
+                
+               
+            }
+        }
         
-        //......
         
-        let vc = UIStoryboard(name: "DashBoard", bundle: nil).instantiateViewController(withIdentifier: "Dashboard_ViewController") as! Dashboard_ViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+      
     }
     
     
@@ -118,10 +182,7 @@ class Login_ViewController: UIViewController {
 
 extension Login_ViewController
 {
-    
-    
-    
-    // email validationFuntion
+  // email validationFuntion
     func validateEmail(enteredEmail:String) -> Bool {
         
         let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"

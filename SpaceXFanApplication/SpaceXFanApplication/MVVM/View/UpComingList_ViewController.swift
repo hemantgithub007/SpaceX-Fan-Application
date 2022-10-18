@@ -8,13 +8,35 @@
 import UIKit
 
 class UpComingList_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+
+    /// Roket detials view model
+    var upcomingViewModel = UpcomingViewModel()
+    var upcomingRocketDataArr = [UpcomingModel]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        self.getUpcomingRocketDataFromAPI()
+
+    }
     
+    
+    // Method to get the data from API
+    private func getUpcomingRocketDataFromAPI() {
+        
+        let apiURL = Constants.baseUrl + APIPostString.Get_Upcoming_Rockets
+        upcomingViewModel.getRocketDataFromAPI(apiURL: apiURL, completion: { [weak self] rocketData in
+            self?.upcomingRocketDataArr = rocketData
+            DispatchQueue.main.async {
+                
+                print(self?.upcomingRocketDataArr[0].name ?? "")
+            }
+        })
+    }
 
     
       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

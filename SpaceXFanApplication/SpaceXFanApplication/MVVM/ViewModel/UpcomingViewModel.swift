@@ -1,18 +1,19 @@
 //
-//  RocketDataViewModel.swift
+//  UpcomingViewModel.swift
 //  SpaceXFanApplication
 //
-//  Created by Vestel on 04/10/22.
+//  Created by hemant kumar on 19/10/22.
 //
 
 import Foundation
-// MARK: RocketDataViewModel
+
+// MARK: UpcomingViewModel
 
 
-class RocketDataViewModel {
-    var rocketData = [RocketDataModel]()
-    // Method for calling the API for Rocket Data
-    func getRocketDataFromAPI(apiURL: String, completion: @escaping ([RocketDataModel]) -> ()) {
+class UpcomingViewModel {
+    var upcomingRocketData = [UpcomingModel]()
+    // Method for calling the API for UpComing Rocket Data
+    func getRocketDataFromAPI(apiURL: String, completion: @escaping ([UpcomingModel]) -> ()) {
         guard let url = URL(string: apiURL) else {
             debugPrint("Invalid url...")
             return
@@ -23,10 +24,10 @@ class RocketDataViewModel {
                 // Check data is available or not
                 if let apiData = data {
                     do {
-                        let rocketData = try? JSONDecoder().decode([RocketDataModel].self, from: apiData)
+                        let upcomingRocketData = try? JSONDecoder().decode([UpcomingModel].self, from: apiData)
                         // Check data is decoded successfully or not
-                        guard let rocketDataFromAPI = rocketData else {
-                            debugPrint("Roket Data not found!!, try Again")
+                        guard let rocketDataFromAPI = upcomingRocketData else {
+                            debugPrint("UpcomingRocket Data not found!!, try Again")
                             return
                         }
                         // Send completion using main thread

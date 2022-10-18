@@ -37,7 +37,9 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
     
     // Method to get the data from API
     private func getRocketDataFromAPI() {
-        rocketDataViewModel.getRocketDataFromAPI(completion: { [weak self] rocketData in
+        
+        let apiURL = Constants.baseUrl + APIPostString.Get_All_Rockets
+        rocketDataViewModel.getRocketDataFromAPI(apiURL: apiURL, completion: { [weak self] rocketData in
             self?.rocketDataArr = rocketData
             DispatchQueue.main.async {
                 
@@ -109,8 +111,7 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let indexPaths = IndexPath(row: indexPath.row, section: 0)
-        var str = "Name : " + self.rocketDataArr[indexPath.row].name + "\n"
+        let str = "Name : " + self.rocketDataArr[indexPath.row].name + "\n"
         + "Flight Number : " + String(self.rocketDataArr[indexPath.row].engines.number) + self.rocketDataArr[indexPath.row].engines.type + self.rocketDataArr[indexPath.row].engines.version + "\n"
         + "Launch Date : " + self.rocketDataArr[indexPath.row].firstFlight + "\n"
         + "Upcoming : False" + "\n" + "Details : " + self.rocketDataArr[indexPath.row].welcomeDescription + "\n" +  "Failure time : " + self.rocketDataArr[indexPath.row].firstFlight + "\n" + "Failure Reason : " + self.rocketDataArr[indexPath.row].type + "Engine Failure"
@@ -133,7 +134,7 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
 //            let indexPaths = IndexPath(row: sender.tag, section: 0)
            // let cell = self.rocketListTable.cellForRow(at: indexPaths) as! RocketList_Cell
             // Detail Page
-            var str = "Name : " + self.rocketDataArr[sender.tag].name + "\n"
+            let str = "Name : " + self.rocketDataArr[sender.tag].name + "\n"
             + "Flight Number : " + String(self.rocketDataArr[sender.tag].engines.number) + self.rocketDataArr[sender.tag].engines.type + self.rocketDataArr[sender.tag].engines.version + "\n"
             + "Launch Date : " + self.rocketDataArr[sender.tag].firstFlight + "\n"
             + "Upcoming : False" + "\n" + "Details : " + self.rocketDataArr[sender.tag].welcomeDescription + "\n" +  "Failure time : " + self.rocketDataArr[sender.tag].firstFlight + "\n" + "Failure Reason : " + self.rocketDataArr[sender.tag].type + "Engine Failure"

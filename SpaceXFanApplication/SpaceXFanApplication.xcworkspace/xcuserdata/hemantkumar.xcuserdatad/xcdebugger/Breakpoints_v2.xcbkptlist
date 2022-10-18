@@ -3,4 +3,85 @@
    uuid = "A132C1BF-66A5-4597-B566-CBA1F2908B40"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66F504B8-C7AD-4F24-A2BD-3559052E0CFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpaceXFanApplication/MVVM/View/UpComingList_ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getUpcomingRocketDataFromAPI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F1BA766-C10E-49FF-8A9B-82A56E45EE00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpaceXFanApplication/MVVM/View/UpComingList_ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getUpcomingRocketDataFromAPI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1F1BA766-C10E-49FF-8A9B-82A56E45EE00 - bebf73e19a2356ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpaceXFanApplication.UpComingList_ViewController.getUpcomingRocketDataFromAPI() -&gt; ()"
+                  moduleName = "SpaceXFanApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hemantkumar/Desktop/Practise/SpaceX-Fan-Application/SpaceXFanApplication/SpaceXFanApplication/MVVM/View/UpComingList_ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "1F1BA766-C10E-49FF-8A9B-82A56E45EE00 - 23f240b41caf0874"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SpaceXFanApplication.UpcomingModel&gt;) -&gt; () in SpaceXFanApplication.UpComingList_ViewController.getUpcomingRocketDataFromAPI() -&gt; ()"
+                  moduleName = "SpaceXFanApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hemantkumar/Desktop/Practise/SpaceX-Fan-Application/SpaceXFanApplication/SpaceXFanApplication/MVVM/View/UpComingList_ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "1F1BA766-C10E-49FF-8A9B-82A56E45EE00 - c711fd6e11f98b2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Array&lt;SpaceXFanApplication.UpcomingModel&gt;) -&gt; () in SpaceXFanApplication.UpComingList_ViewController.getUpcomingRocketDataFromAPI() -&gt; ()"
+                  moduleName = "SpaceXFanApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hemantkumar/Desktop/Practise/SpaceX-Fan-Application/SpaceXFanApplication/SpaceXFanApplication/MVVM/View/UpComingList_ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

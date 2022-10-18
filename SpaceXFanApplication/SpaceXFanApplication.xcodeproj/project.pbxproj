@@ -26,7 +26,11 @@
 		2B20B9BA28FB00DE00C988CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B20B9B928FB00DE00C988CE /* GoogleService-Info.plist */; };
 		2B29512028FAA75500401D0E /* BSValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29511F28FAA75500401D0E /* BSValidations.swift */; };
 		2B2B747528FC1866006E8545 /* RocketDetail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B747428FC1865006E8545 /* RocketDetail_ViewController.swift */; };
+		2B51606128FF04140070E3E6 /* UpcomingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B51606028FF04140070E3E6 /* UpcomingModel.swift */; };
 		2B60A74228FBAAFA00D42F6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60A74128FBAAFA00D42F6C /* SceneDelegate.swift */; };
+		2B66465828FF52E500E89A87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B66465728FF52E500E89A87 /* Constants.swift */; };
+		2B66465A28FF53AB00E89A87 /* APIPostString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B66465928FF53AB00E89A87 /* APIPostString.swift */; };
+		2B66465C28FF5AA900E89A87 /* UpcomingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B66465B28FF5AA900E89A87 /* UpcomingViewModel.swift */; };
 		2B6D6CDE28FB08C200E6ED40 /* Register_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D6CDD28FB08C200E6ED40 /* Register_ViewController.swift */; };
 		2BA01B7B28F7C42A007ACAC8 /* RocketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */; };
 		2BA01B7C28F7C42A007ACAC8 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */; };
@@ -73,7 +77,11 @@
 		2B20B9B928FB00DE00C988CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B29511F28FAA75500401D0E /* BSValidations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSValidations.swift; sourceTree = "<group>"; };
 		2B2B747428FC1865006E8545 /* RocketDetail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetail_ViewController.swift; sourceTree = "<group>"; };
+		2B51606028FF04140070E3E6 /* UpcomingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingModel.swift; sourceTree = "<group>"; };
 		2B60A74128FBAAFA00D42F6C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B66465728FF52E500E89A87 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2B66465928FF53AB00E89A87 /* APIPostString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostString.swift; sourceTree = "<group>"; };
+		2B66465B28FF5AA900E89A87 /* UpcomingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewModel.swift; sourceTree = "<group>"; };
 		2B6D6CDD28FB08C200E6ED40 /* Register_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_ViewController.swift; sourceTree = "<group>"; };
 		2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDataViewModel.swift; sourceTree = "<group>"; };
 		2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -155,6 +163,8 @@
 			children = (
 				2B29511F28FAA75500401D0E /* BSValidations.swift */,
 				1DDC576F28DF2C97002EA24C /* UIColor.swift */,
+				2B66465728FF52E500E89A87 /* Constants.swift */,
+				2B66465928FF53AB00E89A87 /* APIPostString.swift */,
 			);
 			path = CommonClasses;
 			sourceTree = "<group>";
@@ -191,6 +201,7 @@
 			children = (
 				2BA01B7A28F7C42A007ACAC8 /* DatabaseHelper.swift */,
 				2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */,
+				2B66465B28FF5AA900E89A87 /* UpcomingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				2BA01B7E28F7C44C007ACAC8 /* RocketDataModel.swift */,
+				2B51606028FF04140070E3E6 /* UpcomingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,7 +393,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B66465C28FF5AA900E89A87 /* UpcomingViewModel.swift in Sources */,
 				1DB6286528DF7DB200B9F6F5 /* UpComingList_ViewController.swift in Sources */,
+				2B66465828FF52E500E89A87 /* Constants.swift in Sources */,
 				1DBCB8B728E043630017980D /* FavouriteList_Cell.swift in Sources */,
 				1DB6286328DF7D9500B9F6F5 /* FavouriteList_ViewController.swift in Sources */,
 				2B6D6CDE28FB08C200E6ED40 /* Register_ViewController.swift in Sources */,
@@ -393,10 +407,12 @@
 				2BA01B7B28F7C42A007ACAC8 /* RocketDataViewModel.swift in Sources */,
 				2BA01B7F28F7C44C007ACAC8 /* RocketDataModel.swift in Sources */,
 				2BA01BA428F7DE33007ACAC8 /* FavouriteRocketData+CoreDataProperties.swift in Sources */,
+				2B51606128FF04140070E3E6 /* UpcomingModel.swift in Sources */,
 				2BA01BA728F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodeld in Sources */,
 				1D77BF0928E0413D00F0AD2A /* RocketList_Cell.swift in Sources */,
 				1DA7459228DED4B6000D6FC8 /* AppDelegate.swift in Sources */,
 				2B2B747528FC1866006E8545 /* RocketDetail_ViewController.swift in Sources */,
+				2B66465A28FF53AB00E89A87 /* APIPostString.swift in Sources */,
 				1DBCB8B928E043850017980D /* UpComingList_Cell.swift in Sources */,
 				1DDC577028DF2C97002EA24C /* UIColor.swift in Sources */,
 				2BA01B7C28F7C42A007ACAC8 /* DatabaseHelper.swift in Sources */,

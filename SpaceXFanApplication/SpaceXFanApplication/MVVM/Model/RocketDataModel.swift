@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - RocketDataModel
+// MARK: - Get All Rocket DataModel
 struct RocketDataModel: Codable {
     let height, diameter: Diameter
     let mass: Mass
@@ -150,3 +150,12 @@ struct Payloads: Codable {
 struct CompositeFairing: Codable {
     let height, diameter: Diameter
 }
+
+
+
+
+
+
+
+
+

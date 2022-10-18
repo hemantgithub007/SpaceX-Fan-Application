@@ -25,6 +25,7 @@
 		1DDC577028DF2C97002EA24C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC576F28DF2C97002EA24C /* UIColor.swift */; };
 		2B20B9BA28FB00DE00C988CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B20B9B928FB00DE00C988CE /* GoogleService-Info.plist */; };
 		2B29512028FAA75500401D0E /* BSValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29511F28FAA75500401D0E /* BSValidations.swift */; };
+		2B2B747528FC1866006E8545 /* RocketDetail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B747428FC1865006E8545 /* RocketDetail_ViewController.swift */; };
 		2B60A74228FBAAFA00D42F6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60A74128FBAAFA00D42F6C /* SceneDelegate.swift */; };
 		2B6D6CDE28FB08C200E6ED40 /* Register_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D6CDD28FB08C200E6ED40 /* Register_ViewController.swift */; };
 		2BA01B7B28F7C42A007ACAC8 /* RocketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */; };
@@ -71,6 +72,7 @@
 		248BFF5B416AF1B608807275 /* Pods_SpaceXFanApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXFanApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B20B9B928FB00DE00C988CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B29511F28FAA75500401D0E /* BSValidations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSValidations.swift; sourceTree = "<group>"; };
+		2B2B747428FC1865006E8545 /* RocketDetail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetail_ViewController.swift; sourceTree = "<group>"; };
 		2B60A74128FBAAFA00D42F6C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2B6D6CDD28FB08C200E6ED40 /* Register_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_ViewController.swift; sourceTree = "<group>"; };
 		2BA01B7928F7C42A007ACAC8 /* RocketDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketDataViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				1DBCB8B628E043630017980D /* FavouriteList_Cell.swift */,
 				1DB6286428DF7DB200B9F6F5 /* UpComingList_ViewController.swift */,
 				1DBCB8B828E043850017980D /* UpComingList_Cell.swift */,
+				2B2B747428FC1865006E8545 /* RocketDetail_ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				2BA01BA728F7DE5A007ACAC8 /* FavouriteRocketData.xcdatamodeld in Sources */,
 				1D77BF0928E0413D00F0AD2A /* RocketList_Cell.swift in Sources */,
 				1DA7459228DED4B6000D6FC8 /* AppDelegate.swift in Sources */,
+				2B2B747528FC1866006E8545 /* RocketDetail_ViewController.swift in Sources */,
 				1DBCB8B928E043850017980D /* UpComingList_Cell.swift in Sources */,
 				1DDC577028DF2C97002EA24C /* UIColor.swift in Sources */,
 				2BA01B7C28F7C42A007ACAC8 /* DatabaseHelper.swift in Sources */,

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rocket Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RocketDetail_ViewController" id="Y6W-OH-hqX" customClass="RocketDetail_ViewController" customModule="SpaceXFanApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_Image" translatesAutoresizingMaskIntoConstraints="NO" id="8dM-SE-oGp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hjzvchjd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-bs-haD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="hjzvchjd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-bs-haD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -43,10 +43,10 @@
                                                     <constraint firstAttribute="width" secondItem="v3P-kG-sLL" secondAttribute="height" multiplier="3:2" id="PVw-nD-a91"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hjzvchjd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtI-Q7-eem">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hjzvchjd" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtI-Q7-eem">
                                                 <rect key="frame" x="0.0" y="280" width="375" height="280"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="NJu-Mx-3wD"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="NJu-Mx-3wD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,22 +75,44 @@
                                     <constraint firstItem="53I-ah-DrI" firstAttribute="leading" secondItem="kdD-ci-fG4" secondAttribute="leading" id="hfb-iS-n8n"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIY-7Q-Xm4">
+                                <rect key="frame" x="0.0" y="0.0" width="53" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8YU-KX-nU9"/>
+                                    <constraint firstAttribute="width" constant="53" id="OB6-n2-8wy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                    <attributedString key="attributedTitle"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="click_To_Back:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9SP-eM-n8C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8dM-SE-oGp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="7Q6-WO-OQT"/>
                             <constraint firstItem="kdD-ci-fG4" firstAttribute="top" secondItem="dmA-bs-haD" secondAttribute="bottom" id="93h-PD-3Sj"/>
                             <constraint firstItem="dmA-bs-haD" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="CB0-PG-y0K"/>
+                            <constraint firstItem="wIY-7Q-Xm4" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="GzO-X3-OTt"/>
                             <constraint firstAttribute="trailing" secondItem="kdD-ci-fG4" secondAttribute="trailing" id="Rq3-Ml-SVD"/>
                             <constraint firstAttribute="bottom" secondItem="8dM-SE-oGp" secondAttribute="bottom" id="T5o-oU-p1D"/>
+                            <constraint firstItem="wIY-7Q-Xm4" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="XKG-fE-Nlv"/>
                             <constraint firstItem="8dM-SE-oGp" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="gd2-ib-utN"/>
                             <constraint firstAttribute="trailing" secondItem="dmA-bs-haD" secondAttribute="trailing" id="jbf-Az-Plc"/>
                             <constraint firstItem="kdD-ci-fG4" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="ji5-AH-uiK"/>
                             <constraint firstItem="dmA-bs-haD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" id="mFa-bN-hQu"/>
                             <constraint firstAttribute="trailing" secondItem="8dM-SE-oGp" secondAttribute="trailing" id="ncg-u5-CsK"/>
                             <constraint firstAttribute="bottom" secondItem="kdD-ci-fG4" secondAttribute="bottom" id="ueO-tU-FQT"/>
+                            <constraint firstItem="kdD-ci-fG4" firstAttribute="top" secondItem="wIY-7Q-Xm4" secondAttribute="bottom" id="xEK-ea-kmp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rocketDetailLabel" destination="dtI-Q7-eem" id="5fv-hv-7kd"/>
+                        <outlet property="rocketImage" destination="v3P-kG-sLL" id="eBw-N3-GtJ"/>
+                        <outlet property="rocketName" destination="dmA-bs-haD" id="K5Y-Vl-QVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,6 +120,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="background_Image" width="540" height="960"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

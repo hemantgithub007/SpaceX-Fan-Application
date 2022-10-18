@@ -19,5 +19,9 @@ extension FavouriteRocketData
     }
 
     @NSManaged public var id: String?
+    @NSManaged public var rocketdetails: String?
+    @NSManaged public var rocketImage: String?
+    @NSManaged public var rocketName: String?
+
 
 }

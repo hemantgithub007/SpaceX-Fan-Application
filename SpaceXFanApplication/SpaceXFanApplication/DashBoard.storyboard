@@ -116,7 +116,7 @@
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4An-Iy-FbY">
                                                             <rect key="frame" x="107.5" y="30" width="160" height="160"/>
-                                                            <color key="backgroundColor" systemColor="tintColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="160" id="tbU-Mz-Xez"/>
                                                                 <constraint firstAttribute="height" constant="160" id="x8g-w8-G67"/>
@@ -236,15 +236,15 @@
                                                                 <constraint firstAttribute="height" constant="1" id="6fs-XE-vyC"/>
                                                             </constraints>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rt4-u6-HTL">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rt4-u6-HTL">
                                                             <rect key="frame" x="107.5" y="30" width="160" height="160"/>
-                                                            <color key="backgroundColor" systemColor="tintColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="160" id="MgF-8k-Rwb"/>
                                                                 <constraint firstAttribute="width" constant="160" id="Ubz-ag-eCP"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAHICOM 6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0T-yU-Udu">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0T-yU-Udu">
                                                             <rect key="frame" x="10" y="5" width="355" height="20"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="14"/>
@@ -253,6 +253,7 @@
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav" translatesAutoresizingMaskIntoConstraints="NO" id="khj-Bo-sPN">
                                                             <rect key="frame" x="337" y="164" width="25" height="25"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="JP4-Na-O4y"/>
                                                                 <constraint firstAttribute="height" constant="25" id="bwC-Zk-Fk7"/>
@@ -297,6 +298,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="likeFAV_button" destination="xjl-r3-Mqa" id="Mbu-LC-3Kq"/>
+                                            <outlet property="likeFAV_image" destination="khj-Bo-sPN" id="cuH-Qo-nn9"/>
+                                            <outlet property="rocketFAV_image" destination="Rt4-u6-HTL" id="jsa-hc-nqs"/>
+                                            <outlet property="rocketFAV_name" destination="L0T-yU-Udu" id="nuC-gK-bUb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -314,6 +321,9 @@
                             <constraint firstItem="nOv-qj-ZjJ" firstAttribute="top" secondItem="P2e-52-fgf" secondAttribute="top" id="r5j-As-YrK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favourit_TableView" destination="nOv-qj-ZjJ" id="0UA-MC-lCx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vt7-Yf-PBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -397,9 +407,6 @@
         <image name="heart1" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -8,10 +8,12 @@
 import UIKit
 import LocalAuthentication
 import Firebase
+import SVProgressHUD
 
 class Login_ViewController: UIViewController {
 
-    
+    let hud = SVProgressHUD()
+
     @IBOutlet weak var userNameView: UIView!
     @IBOutlet weak var userPasswordView: UIView!
     @IBOutlet weak var loginButton: UIButton!
@@ -111,6 +113,17 @@ class Login_ViewController: UIViewController {
         }
         
         
+     
+        DispatchQueue.main.async {
+                SVProgressHUD.setDefaultStyle(.custom)
+                SVProgressHUD.setDefaultMaskType(.custom)
+                SVProgressHUD.setForegroundColor(UIColor.white)           //Ring Color
+                SVProgressHUD.setBackgroundColor(UIColor.init(hex: "0896D8"))        //HUD Color
+                SVProgressHUD.setBackgroundLayerColor(UIColor .init(hex: "000000", alpha: 0))    //Background Color
+                SVProgressHUD.show()
+                
+            }
+        
         Auth.auth().signIn(withEmail: userNameText.text ?? "", password: userPasswordText.text ?? "") { (authResult, error) in
 
             if error != nil
@@ -125,9 +138,11 @@ class Login_ViewController: UIViewController {
                 let when = DispatchTime.now() + 2
                 DispatchQueue.main.asyncAfter(deadline: when){
                     // your code with delay
+                    SVProgressHUD.dismiss()
+
                     alert.dismiss(animated: true, completion: {
                         
-                      
+
                         
                     })
                 }
@@ -149,6 +164,8 @@ class Login_ViewController: UIViewController {
                     // your code with delay
                     alert.dismiss(animated: true, completion: {
                         
+                        SVProgressHUD.dismiss()
+
                         print("Login with ID : ",(authResult?.user.email ?? "") as String)
 
                         UserDefaults.standard.set(authResult?.user.email, forKey: "user")
@@ -169,6 +186,65 @@ class Login_ViewController: UIViewController {
         
       
     }
+    
+    
+    
+    
+    @IBAction func click_To_ForgotPassword(_ sender: UIButton) {
+        let emailValue = userNameText.text ?? ""
+        
+        if (validateEmail(enteredEmail: emailValue) == false)
+        {
+            let alertController = UIAlertController(title: "Alert!", message: "Enter valid e-mail", preferredStyle:UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                                      { action -> Void in
+                // Put your code here
+            })
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        else if emailValue == ""
+        {
+            let alertController = UIAlertController(title: "Alert!", message: "Enter Email to reset your password", preferredStyle:UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                                      { action -> Void in
+                // Put your code here
+            })
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        else {
+            
+            Auth.auth().sendPasswordReset(withEmail: self.userNameText.text!) { (error) in
+         
+                
+                
+                if error != nil
+                {
+                    print(error?.localizedDescription ?? "Exceptions")
+                }
+                else
+                {
+
+                    let alertController = UIAlertController(title: "Alert!", message: "A password reset link sent to your Email Address", preferredStyle:UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                                              { action -> Void in
+                        // Put your code here
+                        self.userNameText.text! = ""
+                        self.userPasswordText.text! = ""
+                    })
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                
+                
+                
+            }
+            
+            
+        }
+        
+    }
+    
     
     
     @IBAction func click_To_TouchID(_ sender: UIButton) {

@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class Register_ViewController: UIViewController {
     
@@ -64,6 +65,15 @@ class Register_ViewController: UIViewController {
             
         }
         
+        DispatchQueue.main.async {
+                SVProgressHUD.setDefaultStyle(.custom)
+                SVProgressHUD.setDefaultMaskType(.custom)
+                SVProgressHUD.setForegroundColor(UIColor.white)           //Ring Color
+                SVProgressHUD.setBackgroundColor(UIColor.init(hex: "0896D8"))        //HUD Color
+                SVProgressHUD.setBackgroundLayerColor(UIColor .init(hex: "000000", alpha: 0))    //Background Color
+                SVProgressHUD.show()
+                
+            }
         
         Auth.auth().createUser(withEmail: userNameText_Register.text ?? "", password: userPasswordText_Register.text ?? "") { authResult, error in
           // ...
@@ -79,7 +89,8 @@ class Register_ViewController: UIViewController {
                     // your code with delay
                     alert.dismiss(animated: true, completion: {
                         
-                      
+                        SVProgressHUD.dismiss()
+
                         
                     })
                 }
@@ -97,7 +108,8 @@ class Register_ViewController: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: when){
                     // your code with delay
                     alert.dismiss(animated: true, completion: {
-                        
+                        SVProgressHUD.dismiss()
+
                         self.navigationController?.popViewController(animated: true)
 
                         

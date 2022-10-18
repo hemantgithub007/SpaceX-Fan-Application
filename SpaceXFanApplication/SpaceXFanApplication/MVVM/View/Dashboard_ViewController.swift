@@ -15,18 +15,6 @@ class Dashboard_ViewController: UIViewController {
     let favouritesButton = UIButton()
     let upcomingButtons = UIButton()
     let navBar = UIView()
-    
-    
-    
-//    lazy var rocketList_ViewController : RocketList_ViewController = {
-//
-//       let storyBoard = UIStoryboard(name: "RocketList_ViewController", bundle: Bundle.main)
-//
-//       var viewController = storyBoard.instantiateViewController(withIdentifier: "") as! RocketList_ViewController
-//
-//        self.asChildViewController
-//
-//   }()
 
     @IBOutlet var rocketView: UIView!
     @IBOutlet var favouriteView: UIView!

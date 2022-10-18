@@ -9,6 +9,12 @@ import UIKit
 
 class FavouriteList_Cell: UITableViewCell {
 
+    @IBOutlet var rocketFAV_image: UIImageView!
+    @IBOutlet var likeFAV_image: UIImageView!
+    @IBOutlet var rocketFAV_name: UILabel!
+    @IBOutlet var likeFAV_button: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

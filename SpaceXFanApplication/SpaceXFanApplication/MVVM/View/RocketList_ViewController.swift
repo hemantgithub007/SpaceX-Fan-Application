@@ -19,7 +19,6 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
     var rocketDataViewModel = RocketDataViewModel()
     var rocketDataArr = [RocketDataModel]()
     
-    var fetchFevRocketData = [FavouriteRocketData]()
 
     override func viewDidAppear(_ animated: Bool) {
         self.rocketListTable.reloadData()
@@ -34,25 +33,15 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
 
     }
     
+    
+    
     // Method to get the data from API
     private func getRocketDataFromAPI() {
         rocketDataViewModel.getRocketDataFromAPI(completion: { [weak self] rocketData in
             self?.rocketDataArr = rocketData
             DispatchQueue.main.async {
                 
-                
-                                // core date get all data
-                                self!.fetchFevRocketData = DatabaseHelper.shareInstance.getAllData()
-                
-                                print("total core data count :  ", self!.fetchFevRocketData.count)
-                
-                //                print("core data get all data : ", self!.arrData)
-                
-                                for i in 0..<self!.fetchFevRocketData.count {
-                
-                                    print("core data get all data : "+(self!.fetchFevRocketData[i].id ?? "") + "\n")
-                                }
-                
+          
                 self?.rocketListTable.reloadData()
             }
         })
@@ -74,28 +63,43 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
           let cell:RocketList_Cell = tableView.dequeueReusableCell(withIdentifier: "RocketList_Cell") as! RocketList_Cell
           
           cell.rocket_name.text = rocketDataArr[indexPath.row].name
+   
           
+          let hr_Image = self.rocketDataArr[indexPath.row].flickrImages[0] 
           
-
-          let strUrl = self.rocketDataArr[indexPath.row].flickrImages[0]
-          let imgUrl = URL(string: strUrl)
+          if let url = URL(string: hr_Image )
+          {
+              do
+              {
+                  let resource = ImageResource(downloadURL: url)
+                  KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
+                      switch result {
+                      case .success(let value):
+                          print("Image: \(value.image). Got from: \(value.cacheType)")
+                          
+                          cell.rocket_image.image = value.image
+                      case .failure(let error):
+                          SVProgressHUD.dismiss()
+                          print("Error: \(error)")
+                      }
+                  }
+              }
+          }
           
-          cell.rocket_image.kf.setImage(with: imgUrl)
+        
 
           cell.like_button.tag = indexPath.row
           cell.like_button.addTarget(self, action: #selector(click_To_add_Favourite(sender:)), for: .touchUpInside)
-          if self.fetchFevRocketData.contains(where: { $0.id == self.rocketDataArr[indexPath.row].id }) == true
+          if DatabaseHelper.shareInstance.someEntityExists_H(userId: rocketDataArr[indexPath.row].id) == true
               {
               cell.like_image.image = UIImage(named:"fav")
-              cell.like_button.isSelected = true
               }
              else
               {
                   cell.like_image.image = UIImage(named:"heart1")
-                  cell.like_button.isSelected = false
              }
-              
-          
+
+
           
           
           return cell
@@ -104,49 +108,43 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detail:DetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        self.navigationController?.pushViewController(detail, animated: true)
-//
+
         let indexPaths = IndexPath(row: indexPath.row, section: 0)
-        let cell = self.rocketListTable.cellForRow(at: indexPaths) as! RocketList_Cell
-    
+        var str = "Name : " + self.rocketDataArr[indexPath.row].name + "\n"
+        + "Flight Number : " + String(self.rocketDataArr[indexPath.row].engines.number) + self.rocketDataArr[indexPath.row].engines.type + self.rocketDataArr[indexPath.row].engines.version + "\n"
+        + "Launch Date : " + self.rocketDataArr[indexPath.row].firstFlight + "\n"
+        + "Upcoming : False" + "\n" + "Details : " + self.rocketDataArr[indexPath.row].welcomeDescription + "\n" +  "Failure time : " + self.rocketDataArr[indexPath.row].firstFlight + "\n" + "Failure Reason : " + self.rocketDataArr[indexPath.row].type + "Engine Failure"
+        
+        let vc = UIStoryboard(name: "Detailboard", bundle: nil).instantiateViewController(withIdentifier: "RocketDetail_ViewController") as! RocketDetail_ViewController
+        vc.rocketDiscription = str
+        vc.titleRocketName = self.rocketDataArr[indexPath.row].name
+        vc.detailImageurl = self.rocketDataArr[indexPath.row].flickrImages[0]
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+       
+        
     }
     
     @objc func click_To_add_Favourite(sender:UIButton)
     {
         DispatchQueue.main.async {
          
-        //........
-        
-        let indexPaths = IndexPath(row: sender.tag, section: 0)
-        let cell = self.rocketListTable.cellForRow(at: indexPaths) as! RocketList_Cell
-        
-        if cell.like_button.isSelected == false
-        {
-        let dict:[String:String] = ["id":self.rocketDataArr[sender.tag].id]
-        DatabaseHelper.shareInstance.save(object: dict)
-            if self.fetchFevRocketData.count>0{
-                self.fetchFevRocketData.removeAll()   }
-        self.fetchFevRocketData = DatabaseHelper.shareInstance.getAllData()
-
-
-        }
-       else
-        {
             
-          
-            DatabaseHelper.shareInstance.deleteData(indexs: sender.tag, idString: self.rocketDataArr[sender.tag].id)
-            if self.fetchFevRocketData.count>0{
-                self.fetchFevRocketData.removeAll()   }
-            self.fetchFevRocketData = DatabaseHelper.shareInstance.getAllData()
+//            let indexPaths = IndexPath(row: sender.tag, section: 0)
+           // let cell = self.rocketListTable.cellForRow(at: indexPaths) as! RocketList_Cell
+            // Detail Page
+            var str = "Name : " + self.rocketDataArr[sender.tag].name + "\n"
+            + "Flight Number : " + String(self.rocketDataArr[sender.tag].engines.number) + self.rocketDataArr[sender.tag].engines.type + self.rocketDataArr[sender.tag].engines.version + "\n"
+            + "Launch Date : " + self.rocketDataArr[sender.tag].firstFlight + "\n"
+            + "Upcoming : False" + "\n" + "Details : " + self.rocketDataArr[sender.tag].welcomeDescription + "\n" +  "Failure time : " + self.rocketDataArr[sender.tag].firstFlight + "\n" + "Failure Reason : " + self.rocketDataArr[sender.tag].type + "Engine Failure"
 
-            //            let indexPath = IndexPath(row:sender.tag, section:0)
-//            if  if self.fetchFevRocketData.contains(where: { $0.id == self.rocketDataArr[indexPath.row].id }) == true {
-//
-//            }
-//
-       }
-            self.rocketListTable.reloadData()
+        let dict:[String:String] = ["id":self.rocketDataArr[sender.tag].id,
+                                    "rocketdetails":str,
+                                    "rocketImage":self.rocketDataArr[sender.tag].flickrImages[0],
+                                    "rocketName":self.rocketDataArr[sender.tag].name]
+            
+        DatabaseHelper.shareInstance.save(object: dict)
+        self.rocketListTable.reloadData()
 
         }
 

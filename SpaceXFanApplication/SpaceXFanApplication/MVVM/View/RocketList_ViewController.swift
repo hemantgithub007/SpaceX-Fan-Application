@@ -15,60 +15,47 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var rocketListTable: UITableView!
     let hud = SVProgressHUD()
     
-    /// Roket detials view model
     var rocketDataViewModel = RocketDataViewModel()
     var rocketDataArr = [RocketDataModel]()
     
-
-    override func viewDidAppear(_ animated: Bool) {
-        self.rocketListTable.reloadData()
-
-    }
-    
-    
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getRocketDataFromAPI()
 
     }
     
-    
-    
+
     // Method to get the data from API
-    private func getRocketDataFromAPI() {
+     func getRocketDataFromAPI() {
         
         let apiURL = Constants.baseUrl + APIPostString.Get_All_Rockets
         rocketDataViewModel.getRocketDataFromAPI(apiURL: apiURL, completion: { [weak self] rocketData in
             self?.rocketDataArr = rocketData
             DispatchQueue.main.async {
-                
-          
-                self?.rocketListTable.reloadData()
+            self?.rocketListTable.reloadData()
             }
         })
     
 }
 
+    
     // MARK: LoadRocketDetailsVC extension for Table view Delegate & DataSource
     // MARK: - Number Of Sections
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     // MARK: - Number of rows in section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rocketDataArr.count
     }
+    
       
-      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           let cell:RocketList_Cell = tableView.dequeueReusableCell(withIdentifier: "RocketList_Cell") as! RocketList_Cell
-          
           cell.rocket_name.text = rocketDataArr[indexPath.row].name
-   
           
           let hr_Image = self.rocketDataArr[indexPath.row].flickrImages[0] 
-          
           if let url = URL(string: hr_Image )
           {
               do
@@ -78,7 +65,6 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
                       switch result {
                       case .success(let value):
                           print("Image: \(value.image). Got from: \(value.cacheType)")
-                          
                           cell.rocket_image.image = value.image
                       case .failure(let error):
                           SVProgressHUD.dismiss()
@@ -88,10 +74,9 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
               }
           }
           
-        
-
           cell.like_button.tag = indexPath.row
           cell.like_button.addTarget(self, action: #selector(click_To_add_Favourite(sender:)), for: .touchUpInside)
+        
           if DatabaseHelper.shareInstance.someEntityExists_H(userId: rocketDataArr[indexPath.row].id) == true
               {
               cell.like_image.image = UIImage(named:"fav")
@@ -101,29 +86,22 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
                   cell.like_image.image = UIImage(named:"heart1")
              }
 
-
-          
-          
           return cell
       }
       
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         let str = "Name : " + self.rocketDataArr[indexPath.row].name + "\n"
         + "Flight Number : " + String(self.rocketDataArr[indexPath.row].engines.number) + self.rocketDataArr[indexPath.row].engines.type + self.rocketDataArr[indexPath.row].engines.version + "\n"
         + "Launch Date : " + self.rocketDataArr[indexPath.row].firstFlight + "\n"
         + "Upcoming : False" + "\n" + "Details : " + self.rocketDataArr[indexPath.row].welcomeDescription + "\n" +  "Failure time : " + self.rocketDataArr[indexPath.row].firstFlight + "\n" + "Failure Reason : " + self.rocketDataArr[indexPath.row].type + "Engine Failure"
-        
         let vc = UIStoryboard(name: "Detailboard", bundle: nil).instantiateViewController(withIdentifier: "RocketDetail_ViewController") as! RocketDetail_ViewController
         vc.rocketDiscription = str
         vc.titleRocketName = self.rocketDataArr[indexPath.row].name
         vc.detailImageurl = self.rocketDataArr[indexPath.row].flickrImages[0]
         self.navigationController?.pushViewController(vc, animated: true)
-        
-       
-        
+    
     }
     
     @objc func click_To_add_Favourite(sender:UIButton)

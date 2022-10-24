@@ -13,28 +13,19 @@ class FavouriteList_ViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBOutlet var favourit_TableView: UITableView!
     var fetchFevRocketData = [FavouriteRocketData]()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//    //.................fetch data from core data......................
-//        self.fetchFevRocketData = DatabaseHelper.shareInstance.fetchAllData()
-//        self.favourit_TableView.reloadData()
-
-        
+  
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //.................fetch data from core data......................
             self.fetchFevRocketData = DatabaseHelper.shareInstance.fetchAllData()
             self.favourit_TableView.reloadData()
-
     }
     
     
-    
-
     
       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
           return fetchFevRocketData.count
@@ -95,7 +86,6 @@ class FavouriteList_ViewController: UIViewController, UITableViewDelegate, UITab
     DatabaseHelper.shareInstance.deleteData(idString: self.fetchFevRocketData[sender.tag].id ?? "")
         self.fetchFevRocketData.remove(at: sender.tag)
         self.favourit_TableView.reloadData()
-        
         
     }
     

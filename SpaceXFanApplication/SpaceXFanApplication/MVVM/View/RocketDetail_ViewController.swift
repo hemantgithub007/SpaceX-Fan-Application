@@ -22,6 +22,9 @@ class RocketDetail_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        print("IIII  MMMM GGGGG   :   ",detailImageurl)
 
         rocketDetailLabel.text = rocketDiscription
         rocketName.text = titleRocketName

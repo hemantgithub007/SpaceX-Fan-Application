@@ -20,7 +20,7 @@ class UpComingList_ViewController: UIViewController, UITableViewDelegate, UITabl
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.getUpcomingRocketDataFromAPI()
+      //  self.getUpcomingRocketDataFromAPI()
 
     }
     
@@ -48,20 +48,13 @@ class UpComingList_ViewController: UIViewController, UITableViewDelegate, UITabl
           let cell:UpComingList_Cell = tableView.dequeueReusableCell(withIdentifier: "UpComingList_Cell") as! UpComingList_Cell
    
           return cell
-        //  UITableViewStyle *cell
-  //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-  //        cell?.textLabel?.text = array1[indexPath.row]
-  //        cell?.detailTextLabel?.text = array2[indexPath.row]
-  //        return cell!
+
       }
       
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detail:DetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        self.navigationController?.pushViewController(detail, animated: true)
-//
-        
+
     
     }
   

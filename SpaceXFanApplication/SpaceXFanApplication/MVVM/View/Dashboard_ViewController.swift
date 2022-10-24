@@ -15,34 +15,68 @@ class Dashboard_ViewController: UIViewController {
     let favouritesButton = UIButton()
     let upcomingButtons = UIButton()
     let navBar = UIView()
+    
+    
 
     @IBOutlet var rocketView: UIView!
     @IBOutlet var favouriteView: UIView!
     @IBOutlet var upComingView: UIView!
     
     
+    
+    var rocketList : RocketList_ViewController?
+    var favList : FavouriteList_ViewController?
+    var upcomingList : UpComingList_ViewController?
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         rocketView.isHidden = false
         favouriteView.isHidden = true
         upComingView.isHidden = true
         
+        
         self.headerButtons()
         
         
         
-        
+        if let vc = rocketList {
+            vc.getRocketDataFromAPI()
+        }
         
     }
     
-    func addChildClasses() {
-         
+    
+    
+//..................Redirect differenet Views......................................
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "rocketList"{
+            if let vc = segue.destination as? RocketList_ViewController{
+                self.rocketList = vc
+            }
+        }
+        if segue.identifier == "favList"{
+            if let vc = segue.destination as? FavouriteList_ViewController{
+                self.favList = vc
+            }
+        }
+        
+        if segue.identifier == "upcomingList"{
+            if let vc = segue.destination as? UpComingList_ViewController{
+                self.upcomingList = vc
+            }
+        }
     }
+   
     
     
     
+    
+    //......................... Header Button Configer...............................
     func headerButtons() {
         rocketsButton.setTitle("Rockets", for: .normal)
         rocketsButton.tag = 0
@@ -50,6 +84,7 @@ class Dashboard_ViewController: UIViewController {
         rocketsButton.frame = CGRect(x: 0, y: 40 , width: self.view.frame.size.width/3, height: 30)
         rocketsButton.addTarget(self, action: #selector(tapOption(sender:)), for: .touchUpInside)
         self.headerView.addSubview(rocketsButton)
+        
         
         
         favouritesButton.setTitle("Favourite", for: .normal)
@@ -78,38 +113,57 @@ class Dashboard_ViewController: UIViewController {
     
     
     
+    
+    
+    //...............Click On Header Buttons.......................................
     @objc func tapOption(sender : UIButton) {
         print(sender.tag)
         if sender.tag == 0 {
             UIView.animate(withDuration: 0.3, animations: {
-                self.navBar.frame = CGRect(x: 0, y: 72 , width: self.view.frame.size.width/3, height: 8)
-                self.navBar.layoutIfNeeded()
+            self.navBar.frame = CGRect(x: 0, y: 72 , width: self.view.frame.size.width/3, height: 8)
+            self.navBar.layoutIfNeeded()
             })
+            
+            
+            if let vc = rocketList {
+                vc.getRocketDataFromAPI()
+            }
             
             rocketView.isHidden = false
             favouriteView.isHidden = true
             upComingView.isHidden = true
             
         }
+        
         else if sender.tag == 1 {
             UIView.animate(withDuration: 0.3, animations: {
-                self.navBar.frame = CGRect(x: self.view.frame.size.width/3, y: 72 , width: self.view.frame.size.width/3, height: 8)
-
-                self.navBar.layoutIfNeeded()
+            self.navBar.frame = CGRect(x: self.view.frame.size.width/3, y: 72 , width: self.view.frame.size.width/3, height: 8)
+            self.navBar.layoutIfNeeded()
             })
+            
+            if let vc = favList {
+                vc.viewWillAppear(true)
+            }
+            
             rocketView.isHidden = true
             favouriteView.isHidden = false
             upComingView.isHidden = true
+            
         }
         else if sender.tag == 2 {
             UIView.animate(withDuration: 0.3, animations: {
-                self.navBar.frame = CGRect(x: (self.view.frame.size.width/3) * 2, y: 72 , width: self.view.frame.size.width/3, height: 8)
-
-                self.navBar.layoutIfNeeded()
+            self.navBar.frame = CGRect(x: (self.view.frame.size.width/3) * 2, y: 72 , width: self.view.frame.size.width/3, height: 8)
+            self.navBar.layoutIfNeeded()
             })
+            
+            if let vc = upcomingList {
+                vc.viewWillAppear(true)
+            }
+            
             rocketView.isHidden = true
             favouriteView.isHidden = true
             upComingView.isHidden = false
+            
         }
     }
 

@@ -39,8 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else
         {
-            let launchScreenVC = UIStoryboard.init(name: "DashBoard", bundle: nil)
-            let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "Dashboard_ViewController")
+            let DashBoard = UIStoryboard.init(name: "DashBoard", bundle: nil)
+            let rootVC = DashBoard.instantiateViewController(withIdentifier: "Dashboard_ViewController")
             self.window?.rootViewController = rootVC
             self.window?.makeKeyAndVisible()
         }
@@ -66,8 +66,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    @objc func dismissSplashController() {
        // Onetime Login
 
-           let launchScreenVC = UIStoryboard.init(name: "Main", bundle: nil)
-           let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "Login_ViewController")
+           let LoginVC = UIStoryboard.init(name: "Main", bundle: nil)
+           let rootVC = LoginVC.instantiateViewController(withIdentifier: "Login_ViewController")
            self.window?.rootViewController = rootVC
            self.window?.makeKeyAndVisible()
  

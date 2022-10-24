@@ -31,21 +31,21 @@
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="goz-WH-DhW" kind="embed" id="QoT-6f-3ep"/>
+                                    <segue destination="goz-WH-DhW" kind="embed" identifier="upcomingList" id="QoT-6f-3ep"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-cW-n4G">
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="bZF-Ur-gEw" kind="embed" id="CcM-ug-OMV"/>
+                                    <segue destination="bZF-Ur-gEw" kind="embed" identifier="favList" id="CcM-ug-OMV"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ws5-lj-yUo">
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="Nth-Dp-EPY" kind="embed" id="SLe-m0-cR9"/>
+                                    <segue destination="Nth-Dp-EPY" kind="embed" identifier="rocketList" id="SLe-m0-cR9"/>
                                 </connections>
                             </containerView>
                         </subviews>

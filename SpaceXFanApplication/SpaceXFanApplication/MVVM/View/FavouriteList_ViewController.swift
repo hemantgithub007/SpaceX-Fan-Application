@@ -74,6 +74,11 @@ class FavouriteList_ViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        let vc = UIStoryboard(name: "Detailboard", bundle: nil).instantiateViewController(withIdentifier: "RocketDetail_ViewController") as! RocketDetail_ViewController
+        vc.rocketDiscription = self.fetchFevRocketData[indexPath.row].rocketdetails ?? ""
+        vc.titleRocketName = self.fetchFevRocketData[indexPath.row].rocketName ?? ""
+        vc.detailImageurl = self.fetchFevRocketData[indexPath.row].rocketImage ?? ""
+        self.navigationController?.pushViewController(vc, animated: true)
     
     }
   

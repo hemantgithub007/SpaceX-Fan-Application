@@ -157,8 +157,10 @@ class Dashboard_ViewController: UIViewController {
             })
             
             if let vc = upcomingList {
-                vc.viewWillAppear(true)
+                vc.callapigetRocketList()
             }
+            
+            
             
             rocketView.isHidden = true
             favouriteView.isHidden = true

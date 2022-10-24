@@ -6,44 +6,49 @@
 //
 
 import Foundation
+import UIKit
+import MobileCoreServices
 
-// MARK: UpcomingViewModel
 
+//..................Another way of Api Calling..........................
 
-class UpcomingViewModel {
-    var upcomingRocketData = [UpcomingModel]()
-    // Method for calling the API for UpComing Rocket Data
-    func getRocketDataFromAPI(apiURL: String, completion: @escaping ([UpcomingModel]) -> ()) {
-        guard let url = URL(string: apiURL) else {
-            debugPrint("Invalid url...")
-            return
-        }
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            // While error is not there
-            if error == nil {
-                // Check data is available or not
-                if let apiData = data {
-                    do {
-                        let upcomingRocketData = try? JSONDecoder().decode([UpcomingModel].self, from: apiData)
-                        // Check data is decoded successfully or not
-                        guard let rocketDataFromAPI = upcomingRocketData else {
-                            debugPrint("UpcomingRocket Data not found!!, try Again")
-                            return
-                        }
-                        // Send completion using main thread
-                        DispatchQueue.main.async {
-                            completion(rocketDataFromAPI)
-                        }
-                    }
-                } else {
-                    debugPrint("Data from API not Found!!")
-                }
-            } else {
-                debugPrint("Something went wrong with API to fetch the data from API")
-            }
-        }.resume()
+final class NetworkManagerBlock {
+    
+    let baseURL = "https://api.spacexdata.com/v4/"
+    var params:Dictionary = Dictionary<String,Any>()
+    var responseData =  Dictionary<String,Any>()
+    
+    func fetchData(withUrl apiName:String, completionHandler: @escaping (Any) -> Void) {
+     let url = URL(string: baseURL + apiName)!
+     print(url)
+     var request = URLRequest(url: url)
+     request.httpMethod = "GET"
+     request.setValue("application/json", forHTTPHeaderField:"Content-Type")
+     for (key,value) in params {
+     let result_string = "\(value)"
+     request.addValue(result_string , forHTTPHeaderField: key)
     }
-    
-    
-    
+        
+    let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+      if let error = error {
+        print("Error with fetching films: \(error)")
+        let errorMsg = "Something went wrong please try again!"
+        completionHandler(errorMsg)
+        return
+      }
+      guard let httpResponse = response as? HTTPURLResponse,
+            (200...299).contains(httpResponse.statusCode) else {
+                print("Error with the response, unexpected status code: \(String(describing: response))")
+        let errorMsg = "Something went wrong please try again!"
+        completionHandler(errorMsg)
+        return
+      }
+          if let data = data,
+          let jsonResults = try? JSONSerialization.jsonObject(with: data, options: []) as? Any {
+              completionHandler(jsonResults)
+           }
+        })
+    task.resume()
+  }
+
 }

@@ -27,11 +27,22 @@ class RocketList_ViewController: UIViewController, UITableViewDelegate, UITableV
 
     // Method to get the data from API
      func getRocketDataFromAPI() {
+         
+         DispatchQueue.main.async {
+                 SVProgressHUD.setDefaultStyle(.custom)
+                 SVProgressHUD.setDefaultMaskType(.custom)
+                 SVProgressHUD.setForegroundColor(UIColor.white)           //Ring Color
+                 SVProgressHUD.setBackgroundColor(UIColor.init(hex: "0896D8"))        //HUD Color
+                 SVProgressHUD.setBackgroundLayerColor(UIColor .init(hex: "000000", alpha: 0))    //Background Color
+                 SVProgressHUD.show()
+                 
+             }
         
         let apiURL = Constants.baseUrl + APIPostString.Get_All_Rockets
         rocketDataViewModel.getRocketDataFromAPI(apiURL: apiURL, completion: { [weak self] rocketData in
             self?.rocketDataArr = rocketData
             DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
             self?.rocketListTable.reloadData()
             }
         })

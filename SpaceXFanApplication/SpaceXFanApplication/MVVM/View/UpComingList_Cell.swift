@@ -9,6 +9,8 @@ import UIKit
 
 class UpComingList_Cell: UITableViewCell {
 
+    @IBOutlet weak var rocketNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

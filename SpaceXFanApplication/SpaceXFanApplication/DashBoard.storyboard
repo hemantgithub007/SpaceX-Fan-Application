@@ -352,20 +352,31 @@
                                                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAM-cI-Ulm">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ux-rj-r9N">
-                                                            <rect key="frame" x="0.0" y="59.5" width="375" height="0.5"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1W-df-JvT">
+                                                            <rect key="frame" x="0.0" y="59" width="375" height="1"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="0.5" id="efG-MN-zbn"/>
+                                                                <constraint firstAttribute="height" constant="1" id="dpX-QJ-drH"/>
                                                             </constraints>
                                                         </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGk-oa-ukV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="9Ux-rj-r9N" secondAttribute="bottom" id="5Nq-ac-BsU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="P1W-df-JvT" secondAttribute="bottom" id="4Or-Y8-TZp"/>
                                                         <constraint firstAttribute="height" constant="60" id="8PE-qR-Gv8"/>
-                                                        <constraint firstItem="9Ux-rj-r9N" firstAttribute="leading" secondItem="kAM-cI-Ulm" secondAttribute="leading" id="CuR-f4-0YN"/>
-                                                        <constraint firstAttribute="trailing" secondItem="9Ux-rj-r9N" secondAttribute="trailing" id="ZVV-02-NqJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PGk-oa-ukV" secondAttribute="bottom" id="QjF-sU-tr6"/>
+                                                        <constraint firstItem="PGk-oa-ukV" firstAttribute="leading" secondItem="kAM-cI-Ulm" secondAttribute="leading" id="T6D-eb-WkO"/>
+                                                        <constraint firstItem="P1W-df-JvT" firstAttribute="leading" secondItem="kAM-cI-Ulm" secondAttribute="leading" id="gdo-BX-QaG"/>
+                                                        <constraint firstItem="PGk-oa-ukV" firstAttribute="top" secondItem="kAM-cI-Ulm" secondAttribute="top" id="nBE-rv-721"/>
+                                                        <constraint firstAttribute="trailing" secondItem="P1W-df-JvT" secondAttribute="trailing" id="sm0-W3-3gl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PGk-oa-ukV" secondAttribute="trailing" id="z29-Sv-6He"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -378,6 +389,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="rocketNameLabel" destination="PGk-oa-ukV" id="bR6-G9-oP5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -395,10 +409,13 @@
                             <constraint firstAttribute="bottom" secondItem="Kw7-j2-TBb" secondAttribute="bottom" id="kSo-n3-dyM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="upcomingEocketList" destination="Kw7-j2-TBb" id="Nvz-6Q-UqR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xX-k6-mi0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="852"/>
+            <point key="canvasLocation" x="1028" y="851.42428785607206"/>
         </scene>
     </scenes>
     <resources>
